@@ -70,6 +70,8 @@
     }
 
     .fluid-container, .full-container, .large-container, .container, .small-container {
+        margin: 0px auto;
+
         &:after {
             content: '';
             display: table;

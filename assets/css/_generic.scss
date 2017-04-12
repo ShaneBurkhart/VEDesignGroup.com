@@ -1,15 +1,7 @@
-@font-face {
-    font-family: 'Gotham';
-    src: url('assets/fonts/gotham-bold-webfont.woff2') format('woff2'),
-         url('assets/fonts/gotham-bold-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
 body, html{
     margin: 0;
     padding: 0;
-    font-family: "Gotham", "Open Sans", sans-serif;
+    font-family: 'Cantarell', sans-serif;
 }
 
 body {
@@ -26,7 +18,7 @@ textarea, input, button {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "ChunkFive";
+    font-family: 'Fjalla One', sans-serif;
     line-height: 1.4;
     margin-top: 0;
     margin-bottom: 30px;
