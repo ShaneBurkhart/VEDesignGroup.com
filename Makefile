@@ -7,4 +7,4 @@ stop:
 	docker-compose down
 
 deploy:
-	ssh -A ubuntu@ 'cd ~/CustomWordpressTheme; git pull origin master'
+	ssh -A ubuntu@35.165.215.109 'cd ~/CustomWordpressTheme; git pull origin master'
