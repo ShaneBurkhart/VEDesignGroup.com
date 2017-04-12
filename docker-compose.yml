@@ -1,0 +1,22 @@
+version: '2.1'
+services:
+    wordpress:
+        build:
+            dockerfile: Dockerfile.wordpress
+            context: .
+        ports:
+            - 5000:80
+        links:
+            - mysql
+        volumes:
+            - ./mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+            - ./data/www:/var/www/html
+            - ./public:/var/www/html/wp-content/themes/custom
+
+    mysql:
+        image: mysql
+        environment:
+            MYSQL_DATABASE: wordpress
+            MYSQL_ROOT_PASSWORD: password
+        volumes:
+            - ./data/mysql:/var/lib/mysql

@@ -1,0 +1,133 @@
+.section {
+    position: relative;
+    padding: 80px 0px;
+
+    &.white {
+        background-color: #ffffff;
+    }
+
+    &.dark-gray {
+        background-color: #5e574f;
+    }
+
+    &.light-gray {
+        background-color: #f6f6f6;
+    }
+
+    &.tera {
+        padding: 160px 0px;
+    }
+
+    &.giga {
+        padding: 140px 0px;
+    }
+
+    &.mega {
+        padding: 120px 0px;
+    }
+
+    &.kilo {
+        padding: 100px 0px;
+    }
+
+    /* 80px is default */
+
+    &.small {
+        padding: 60px 0px;
+    }
+
+    &.tiny {
+        padding: 40px 0px;
+    }
+
+    &.micro {
+        padding: 20px 0px;
+    }
+
+    &.no-padding {
+        padding: 0px 0px;
+    }
+
+    .fluid-container {
+        width: 100%;
+        padding: 0px 3%;
+    }
+
+    .full-container {
+        width: 100%;
+    }
+
+    .large-container {
+        width: 1000px;
+    }
+
+    .container {
+        width: 800px;
+    }
+
+    .small-container {
+        width: 700px;
+    }
+
+    .fluid-container, .full-container, .large-container, .container, .small-container {
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        & > * {
+            vertical-align: top;
+            display: inline-block;
+            float: left;
+            margin-right: 4%;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+
+        & > .full {
+            width: 100%;
+        }
+
+        & > .half {
+            width: 48%;
+        }
+
+        & > .two-thirds {
+            width: 65.2%;
+        }
+
+        & > .third {
+            width: 30.6%;
+        }
+
+        & > .fifth {
+            width: 16.5%;
+        }
+
+        & > .description {
+            width: 55%;
+
+            h1, h2, h3, h4, p {
+                margin-bottom: 10px;
+                padding-bottom: 0px;
+            }
+        }
+
+        & > .graphic {
+            width: 41%;
+
+            &.background {
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+        }
+    }
+}

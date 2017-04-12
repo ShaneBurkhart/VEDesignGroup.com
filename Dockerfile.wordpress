@@ -1,0 +1,5 @@
+FROM wordpress
+
+# Increase max upload size.
+# php.ini shouldn't exist yet.
+RUN echo "memory_limit = 256M\nupload_max_filesize = 64M\npost_max_size = 64M" >> /usr/local/etc/php/php.ini

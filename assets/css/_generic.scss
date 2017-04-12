@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/gotham-bold-webfont.woff2') format('woff2'),
+         url('assets/fonts/gotham-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: "Gotham", "Open Sans", sans-serif;
+}
+
+body {
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+textarea, input, button {
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "ChunkFive";
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 28px;
+    letter-spacing: 5px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+a {
+    color: #87a9cb;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+    &.bold, .bold, b {
+        font-weight: bold !important;
+    }
+
+    &.light, .light {
+        font-weight: 300 !important;
+    }
+
+    &.underline, .underline {
+        text-decoration: underline !important;
+    }
+
+    &.normal, .normal{
+        font-weight: normal !important;
+    }
+}
+
+img {
+    max-width: 100%;
+
+    &.circle {
+        border-radius: 50%;
+    }
+
+    &.outline{
+        border: 3px solid #ffffff;
+        box-shadow: 2px 2px 25px #555555;
+    }
+}
+
+ul {
+    margin-top: 0px;
+    margin-bottom: 25px;
+
+    li {
+        font-size: 16px;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+}
+
+input[type=text], select, textarea {
+    padding: 13px 24px;
+    border-radius: 0px;
+    background-color: #ffffff;
+    border: 1px solid rgb(166, 166, 166);
+    outline: none;
+
+    &.block {
+        display: block;
+        width: 100%;
+    }
+}
+
+.button, button {
+    color: #000000;
+    background-color: transparent;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 14px 50px;
+    border: 1px solid #494949;
+    border-radius: 18px;
+    font-size: 12px;
+    text-shadow: 0px 0px 1px #888888;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-appearance:none;
+    -webkit-print-color-adjust: exact;
+
+    &:hover {
+        color: #4f4f4f;
+        background-color: #ffc600;
+        border-color: #494949;
+    }
+
+    &.block {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.anchor{
+  display: block;
+  height: 25px;
+  margin-top: -50px;
+  visibility: hidden;
+}
