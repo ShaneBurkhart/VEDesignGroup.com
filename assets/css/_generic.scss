@@ -9,6 +9,10 @@ body {
     box-sizing: border-box;
 }
 
+main {
+    padding-top: 70px;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -32,7 +36,7 @@ h1 {
 
 h2 {
     font-size: 28px;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
 }
 
 h3 {
@@ -76,7 +80,7 @@ h1, h2, h3, h4, h5, h6, p, span, a {
     }
 }
 
-img {
+img, .image {
     max-width: 100%;
 
     &.circle {
@@ -114,24 +118,29 @@ input[type=text], select, textarea {
 }
 
 .button, button {
-    color: #000000;
-    background-color: transparent;
+    color: #ffffff;
+    background-color: #57be2f;
     display: inline-block;
     margin-bottom: 10px;
-    padding: 14px 50px;
-    border: 1px solid #494949;
-    border-radius: 18px;
-    font-size: 12px;
+    padding: 14px 36px;
+    border: 1px solid darken(#57be2f, 10%);
+    border-radius: 3px;
+    font-size: 14px;
     text-shadow: 0px 0px 1px #888888;
     text-transform: uppercase;
     cursor: pointer;
-    -webkit-appearance:none;
-    -webkit-print-color-adjust: exact;
 
     &:hover {
-        color: #4f4f4f;
-        background-color: #ffc600;
-        border-color: #494949;
+        background-color: darken(#57be2f, 10%);
+    }
+
+    &.dark-gray {
+        background-color: #666666;
+        border: 1px solid lighten(#666666, 10%);
+
+        &:hover {
+            background-color: darken(#666666, 10%);
+        }
     }
 
     &.block {

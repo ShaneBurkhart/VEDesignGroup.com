@@ -3,38 +3,4 @@
 @import "structure";
 @import "header";
 @import "hero";
-
-#section-to-print {
-    display: none;
-}
-
-@media print {
-    main {
-        margin: 0;
-        padding: 0;
-    }
-
-    body *, main * {
-        display: none;
-    }
-
-    main, main #section-to-print, #section-to-print * {
-        display: block;
-
-        #recipe-container > .full-container > .description {
-            background-image: none;
-            width: 100%;
-            padding: 30px;
-            overflow: auto;
-            position: static;
-
-            ul.recipe-meta > li > i, ul.recipe-meta > li > span {
-                display: inline-block;
-            }
-        }
-    }
-
-    #section-to-print {
-        margin: 0;
-    }
-}
+@import "front-page";

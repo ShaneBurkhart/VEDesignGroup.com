@@ -2217,6 +2217,9 @@ body {
   min-height: 100%;
   box-sizing: border-box; }
 
+main {
+  padding-top: 70px; }
+
 *, *:before, *:after {
   box-sizing: inherit; }
 
@@ -2236,7 +2239,7 @@ h1 {
 
 h2 {
   font-size: 28px;
-  letter-spacing: 5px; }
+  letter-spacing: 1px; }
 
 h3 {
   font-size: 22px; }
@@ -2268,11 +2271,11 @@ h1.underline, h1 .underline, h2.underline, h2 .underline, h3.underline, h3 .unde
 h1.normal, h1 .normal, h2.normal, h2 .normal, h3.normal, h3 .normal, h4.normal, h4 .normal, h5.normal, h5 .normal, h6.normal, h6 .normal, p.normal, p .normal, span.normal, span .normal, a.normal, a .normal {
   font-weight: normal !important; }
 
-img {
+img, .image {
   max-width: 100%; }
-  img.circle {
+  img.circle, .image.circle {
     border-radius: 50%; }
-  img.outline {
+  img.outline, .image.outline {
     border: 3px solid #ffffff;
     box-shadow: 2px 2px 25px #555555; }
 
@@ -2295,23 +2298,24 @@ input[type=text], select, textarea {
     width: 100%; }
 
 .button, button {
-  color: #000000;
-  background-color: transparent;
+  color: #ffffff;
+  background-color: #57be2f;
   display: inline-block;
   margin-bottom: 10px;
-  padding: 14px 50px;
-  border: 1px solid #494949;
-  border-radius: 18px;
-  font-size: 12px;
+  padding: 14px 36px;
+  border: 1px solid #449525;
+  border-radius: 3px;
+  font-size: 14px;
   text-shadow: 0px 0px 1px #888888;
   text-transform: uppercase;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -webkit-print-color-adjust: exact; }
+  cursor: pointer; }
   .button:hover, button:hover {
-    color: #4f4f4f;
-    background-color: #ffc600;
-    border-color: #494949; }
+    background-color: #449525; }
+  .button.dark-gray, button.dark-gray {
+    background-color: #666666;
+    border: 1px solid gray; }
+    .button.dark-gray:hover, button.dark-gray:hover {
+      background-color: #4d4d4d; }
   .button.block, button.block {
     display: block;
     width: 100%;
@@ -2335,7 +2339,10 @@ input[type=text], select, textarea {
 .section {
   position: relative;
   padding: 80px 0px;
+  border-bottom: 1px solid #eaeaea;
   /* 80px is default */ }
+  .section.no-border {
+    border: none; }
   .section.white {
     background-color: #ffffff; }
   .section.dark-gray {
@@ -2375,17 +2382,21 @@ input[type=text], select, textarea {
       content: '';
       display: table;
       clear: both; }
-    .section .fluid-container > *, .section .full-container > *, .section .large-container > *, .section .container > *, .section .small-container > * {
-      vertical-align: top;
-      display: inline-block;
-      float: left;
-      margin-right: 4%; }
-      .section .fluid-container > *:last-child, .section .full-container > *:last-child, .section .large-container > *:last-child, .section .container > *:last-child, .section .small-container > *:last-child {
-        margin-right: 0px; }
     .section .fluid-container > .full, .section .full-container > .full, .section .large-container > .full, .section .container > .full, .section .small-container > .full {
       width: 100%; }
     .section .fluid-container > .half, .section .full-container > .half, .section .large-container > .half, .section .container > .half, .section .small-container > .half {
-      width: 48%; }
+      width: 47%;
+      margin-right: 6%; }
+      .section .fluid-container > .half.divider:after, .section .full-container > .half.divider:after, .section .large-container > .half.divider:after, .section .container > .half.divider:after, .section .small-container > .half.divider:after {
+        background-color: #eaeaea;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        right: -6%;
+        top: 0;
+        bottom: 0; }
     .section .fluid-container > .two-thirds, .section .full-container > .two-thirds, .section .large-container > .two-thirds, .section .container > .two-thirds, .section .small-container > .two-thirds {
       width: 65.2%; }
     .section .fluid-container > .third, .section .full-container > .third, .section .large-container > .third, .section .container > .third, .section .small-container > .third {
@@ -2407,6 +2418,22 @@ input[type=text], select, textarea {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover; }
+    .section .fluid-container > *, .section .full-container > *, .section .large-container > *, .section .container > *, .section .small-container > * {
+      position: relative;
+      vertical-align: top;
+      display: inline-block;
+      float: left;
+      margin-right: 4%; }
+      .section .fluid-container > *:last-child, .section .full-container > *:last-child, .section .large-container > *:last-child, .section .container > *:last-child, .section .small-container > *:last-child {
+        margin-right: 0px; }
+        .section .fluid-container > *:last-child.divider:after, .section .full-container > *:last-child.divider:after, .section .large-container > *:last-child.divider:after, .section .container > *:last-child.divider:after, .section .small-container > *:last-child.divider:after {
+          content: none;
+          display: none; }
+
+@media only screen and (max-width: 1000px) {
+  .section .large-container {
+    width: 100%;
+    padding: 0px 3%; } }
 
 header#main-nav {
   position: fixed !important;
@@ -2414,17 +2441,17 @@ header#main-nav {
   left: 0;
   right: 0;
   z-index: 100001;
-  height: 100px; }
+  height: 70px; }
   header#main-nav ul {
     list-style: none;
     padding: 0; }
     header#main-nav ul li {
       display: inline-block; }
 
-.section.hero {
+.hero {
   position: relative;
   height: 350px; }
-  .section.hero .bg {
+  .hero .bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -2434,56 +2461,53 @@ header#main-nav {
     background-repeat: no-repeat;
     background-position: center;
     z-index: 1; }
-  .section.hero .overlay {
+  .hero .overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: #000000;
-    opacity: .8;
+    opacity: .7;
     z-index: 2; }
-  .section.hero .content {
+  .hero .content {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     right: 0;
     color: #ffffff;
-    padding-top: 60px;
     text-align: center;
-    z-index: 3; }
-  .section.hero h1 {
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    width: 900px; }
+  .hero h1 {
     margin-bottom: 10px; }
-  .section.hero p {
+  .hero p {
     color: #cccccc;
     font-weight: 300; }
-    .section.hero p.shout {
+    .hero p.shout {
       margin-bottom: 5px;
       font-family: "Handlee";
       font-size: 20px; }
-    .section.hero p.narrow {
+    .hero p.narrow {
       width: 75%;
       margin-left: auto;
       margin-right: auto; }
 
-#section-to-print {
-  display: none; }
+@media only screen and (max-width: 1000px) {
+  .hero .content {
+    width: 100%;
+    padding: 0px 3%; } }
 
-@media print {
-  main {
-    margin: 0;
-    padding: 0; }
-  body *, main * {
-    display: none; }
-  main, main #section-to-print, #section-to-print * {
-    display: block; }
-    main #recipe-container > .full-container > .description, main #section-to-print #recipe-container > .full-container > .description, #section-to-print * #recipe-container > .full-container > .description {
-      background-image: none;
-      width: 100%;
-      padding: 30px;
-      overflow: auto;
-      position: static; }
-      main #recipe-container > .full-container > .description ul.recipe-meta > li > i, main #recipe-container > .full-container > .description ul.recipe-meta > li > span, main #section-to-print #recipe-container > .full-container > .description ul.recipe-meta > li > i, main #section-to-print #recipe-container > .full-container > .description ul.recipe-meta > li > span, #section-to-print * #recipe-container > .full-container > .description ul.recipe-meta > li > i, #section-to-print * #recipe-container > .full-container > .description ul.recipe-meta > li > span {
-        display: inline-block; }
-  #section-to-print {
-    margin: 0; } }
+.activity-preview {
+  text-align: center; }
+  .activity-preview .image {
+    width: 200px;
+    height: 200px;
+    background-color: #eaeaea;
+    margin: 0 auto 20px; }
+  .activity-preview h4 {
+    margin-bottom: 0px; }
+  .activity-preview p {
+    color: #888888;
+    font-size: 14px; }

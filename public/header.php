@@ -2,7 +2,7 @@
     $site_header_menu = wp_get_nav_menu_items('Main Nav');
 ?>
 
-<header id="main-nav" class="section no-padding">
+<header id="main-nav" class="section no-padding white">
     <div class="large-container">
         <div class="full">
             <a id="site-logo" href="/"></a>
