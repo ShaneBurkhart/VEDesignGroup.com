@@ -2214,6 +2214,7 @@ body, html {
   font-family: 'Cantarell', sans-serif; }
 
 body {
+  color: #292929;
   min-height: 100%;
   box-sizing: border-box; }
 
@@ -2252,9 +2253,6 @@ p {
   margin-bottom: 25px;
   font-size: 18px;
   line-height: 1.5; }
-
-a {
-  color: #87a9cb; }
 
 a, a:hover {
   text-decoration: none; }
@@ -2443,10 +2441,28 @@ header#main-nav {
   z-index: 100001;
   height: 70px; }
   header#main-nav ul {
+    float: right;
     list-style: none;
-    padding: 0; }
+    padding: 0;
+    margin: 0;
+    margin-top: 21px; }
     header#main-nav ul li {
-      display: inline-block; }
+      display: inline-block;
+      font-size: 18px;
+      padding: 0;
+      margin: 0;
+      margin-left: 15px; }
+      header#main-nav ul li a {
+        color: #818181;
+        font-family: 'Fjalla One', sans-serif;
+        letter-spacing: 1px; }
+        header#main-nav ul li a:hover, header#main-nav ul li a.selected {
+          color: #292929; }
+
+footer address {
+  text-align: center;
+  color: #aba49b;
+  font-size: 14px; }
 
 .hero {
   position: relative;

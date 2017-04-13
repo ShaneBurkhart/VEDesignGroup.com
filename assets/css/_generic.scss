@@ -5,6 +5,7 @@ body, html{
 }
 
 body {
+    color: #292929;
     min-height: 100%;
     box-sizing: border-box;
 }
@@ -52,10 +53,6 @@ p {
     margin-bottom: 25px;
     font-size: 18px;
     line-height: 1.5;
-}
-
-a {
-    color: #87a9cb;
 }
 
 a, a:hover {
