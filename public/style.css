@@ -2328,6 +2328,9 @@ input[type=text], select, textarea {
 .text-right {
   text-align: right; }
 
+.no-margin {
+  margin: 0 !important; }
+
 .anchor {
   display: block;
   height: 25px;
@@ -2373,7 +2376,7 @@ input[type=text], select, textarea {
   .section .container {
     width: 800px; }
   .section .small-container {
-    width: 700px; }
+    width: 500px; }
   .section .fluid-container, .section .full-container, .section .large-container, .section .container, .section .small-container {
     margin: 0px auto; }
     .section .fluid-container:after, .section .full-container:after, .section .large-container:after, .section .container:after, .section .small-container:after {
@@ -2521,7 +2524,13 @@ footer address {
     width: 200px;
     height: 200px;
     background-color: #eaeaea;
-    margin: 0 auto 20px; }
+    margin: 0 auto 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
   .activity-preview h4 {
     margin-bottom: 0px; }
   .activity-preview p {

@@ -6,16 +6,12 @@
 <html <?php language_attributes(); ?>>
     <?php get_template_part('head'); ?>
 
-    <body <?php body_class(); ?>>
+    <body id="contact-page" <?php body_class(); ?>>
 
         <?php get_header(); ?>
 
         <main>
-            <div class="section no-padding white image-with-text">
-                <img src="<?php the_field('hero_image') ?>">
-                <h2 class="text-center"><?php the_field('headline'); ?></h2>
-            </div>
-            <div class="section large white micro-padding-top">
+            <div id="map-section" class="section large white">
                 <div class="container">
                     <div class="full">
                         <p class="text-center"><?php the_field('form_snippet') ?></p>

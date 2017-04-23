@@ -2,6 +2,13 @@
     /**
     * Template Name: Front Page
     */
+
+    $recentActivityQuery = new WP_Query(array(
+        'category_name' => 'recent-activity',
+        'posts_per_page' => 3
+    ));
+    $recentActivity = $recentActivityQuery->posts;
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <?php get_template_part('head'); ?>
@@ -45,20 +52,19 @@
                     </div>
                 </div>
                 <div class="large-container">
-                    <div class="third activity-preview">
-                        <div class="image circle outline" style="background-image: url('');"></div>
-                        <h4>Cranes erected</h4>
-                        <p>Clayton, MO<p>
-                    </div>
-                    <div class="third activity-preview">
-                        <div class="image circle outline" style="background-image: url('');"></div>
-                        <h4>Renderings finalized</h4>
-                        <p>Columbia, MO<p>
-                    </div>
-                    <div class="third activity-preview">
-                        <div class="image circle outline" style="background-image: url('');"></div>
-                        <h4>Installed exterior sheathing</h4>
-                        <p>Columbia, MO<p>
+                    <?php foreach ($recentActivity as $post) { ?>
+                        <div class="third activity-preview">
+                            <div class="image circle outline" style="background-image: url('<?php the_field('thumbnail_preview'); ?>');"></div>
+                            <h4><?php echo $post->post_title; ?></h4>
+                            <p><?php the_field('location', $post->ID); ?><p>
+                        </div>
+                    <?php } ?>
+                </div>
+                <div class="large-container">
+                    <div class="full">
+                        <p class="text-center">
+                            <a class="button dark-gray" href="/recent-activity">All Activity</a>
+                        </p>
                     </div>
                 </div>
             </div>
