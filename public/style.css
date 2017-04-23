@@ -2220,6 +2220,8 @@ body {
 
 main {
   padding-top: 70px; }
+  main.padding {
+    padding-top: 110px; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -2268,6 +2270,9 @@ h1.underline, h1 .underline, h2.underline, h2 .underline, h3.underline, h3 .unde
 
 h1.normal, h1 .normal, h2.normal, h2 .normal, h3.normal, h3 .normal, h4.normal, h4 .normal, h5.normal, h5 .normal, h6.normal, h6 .normal, p.normal, p .normal, span.normal, span .normal, a.normal, a .normal {
   font-weight: normal !important; }
+
+h1.uppercase, h1 .uppercase, h2.uppercase, h2 .uppercase, h3.uppercase, h3 .uppercase, h4.uppercase, h4 .uppercase, h5.uppercase, h5 .uppercase, h6.uppercase, h6 .uppercase, p.uppercase, p .uppercase, span.uppercase, span .uppercase, a.uppercase, a .uppercase {
+  text-transform: uppercase !important; }
 
 img, .image {
   max-width: 100%; }
@@ -2405,12 +2410,12 @@ input[type=text], select, textarea {
     .section .fluid-container > .fifth, .section .full-container > .fifth, .section .large-container > .fifth, .section .container > .fifth, .section .small-container > .fifth {
       width: 16.5%; }
     .section .fluid-container > .description, .section .full-container > .description, .section .large-container > .description, .section .container > .description, .section .small-container > .description {
-      width: 55%; }
+      width: 46%; }
       .section .fluid-container > .description h1, .section .fluid-container > .description h2, .section .fluid-container > .description h3, .section .fluid-container > .description h4, .section .fluid-container > .description p, .section .full-container > .description h1, .section .full-container > .description h2, .section .full-container > .description h3, .section .full-container > .description h4, .section .full-container > .description p, .section .large-container > .description h1, .section .large-container > .description h2, .section .large-container > .description h3, .section .large-container > .description h4, .section .large-container > .description p, .section .container > .description h1, .section .container > .description h2, .section .container > .description h3, .section .container > .description h4, .section .container > .description p, .section .small-container > .description h1, .section .small-container > .description h2, .section .small-container > .description h3, .section .small-container > .description h4, .section .small-container > .description p {
         margin-bottom: 10px;
         padding-bottom: 0px; }
     .section .fluid-container > .graphic, .section .full-container > .graphic, .section .large-container > .graphic, .section .container > .graphic, .section .small-container > .graphic {
-      width: 41%; }
+      width: 50%; }
       .section .fluid-container > .graphic.background, .section .full-container > .graphic.background, .section .large-container > .graphic.background, .section .container > .graphic.background, .section .small-container > .graphic.background {
         height: 100%;
         background-repeat: no-repeat;
@@ -2536,3 +2541,11 @@ footer address {
   .activity-preview p {
     color: #888888;
     font-size: 14px; }
+
+#projects-list .section.project h2 {
+  margin-bottom: 0px; }
+
+#projects-list .section.project p.location {
+  color: #555555;
+  font-size: 16px;
+  margin-bottom: 20px; }
