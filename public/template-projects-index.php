@@ -21,7 +21,7 @@
 
         <?php get_header(); ?>
 
-        <main class="padding">
+        <main>
             <div id="projects-list">
                 <div class="section white no-padding no-border">
                     <div class="container">

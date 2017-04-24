@@ -20,7 +20,7 @@
 
         <?php get_header(); ?>
 
-        <main class="padding">
+        <main>
             <div id="recent-activity-list">
                 <div class="section white no-padding no-border">
                     <div class="container">
@@ -32,17 +32,17 @@
                 <div class="section white tiny">
                     <?php
                         $pages = array_slice($wp_query->posts, 0, 3);
-                        include(locate_template('three-recent-activity-pages-section.php', false, false));
+                        include(locate_template('three-activity-thumbnails.php', false, false));
                     ?>
 
                     <?php
                         $pages = array_slice($wp_query->posts, 3, 3);
-                        include(locate_template('three-recent-activity-pages-section.php', false, false));
+                        include(locate_template('three-activity-thumbnails.php', false, false));
                     ?>
 
                     <?php
                         $pages = array_slice($wp_query->posts, 6, 3);
-                        include(locate_template('three-recent-activity-pages-section.php', false, false));
+                        include(locate_template('three-activity-thumbnails.php', false, false));
                     ?>
 
                     <div class="container">

@@ -2219,9 +2219,9 @@ body {
   box-sizing: border-box; }
 
 main {
-  padding-top: 70px; }
-  main.padding {
-    padding-top: 110px; }
+  padding-top: 110px; }
+  main.no-padding {
+    padding-top: 70px; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -2549,3 +2549,57 @@ footer address {
   color: #555555;
   font-size: 16px;
   margin-bottom: 20px; }
+
+#project .hero {
+  height: 450px; }
+
+#project h1 {
+  margin-bottom: 0px; }
+
+#project p.location {
+  color: #555555;
+  font-size: 16px;
+  margin-bottom: 20px; }
+
+#project ul.project-bullets {
+  position: relative;
+  background-color: #eaeaea;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  list-style: none;
+  border: 1px solid #c2c2c2; }
+  #project ul.project-bullets:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: #c2c2c2; }
+  #project ul.project-bullets:after {
+    content: '';
+    display: table;
+    clear: both; }
+  #project ul.project-bullets .column {
+    width: 50%;
+    display: inline-block;
+    padding: 30px 40px 20px;
+    float: left; }
+    #project ul.project-bullets .column li {
+      position: relative;
+      padding-left: 15px; }
+      #project ul.project-bullets .column li:before {
+        font-family: 'FontAwesome';
+        content: '\f111';
+        font-size: 8px;
+        color: #333333;
+        padding: 8px 0px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; }
+
+#project #project-map {
+  height: 400px; }

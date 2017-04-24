@@ -19,7 +19,7 @@
 
         <main>
             <div class="hero">
-            <div class="bg" style="background-image: url('<?php the_field('hero_background_image'); ?>')"></div>
+                <div class="bg" style="background-image: url('<?php the_field('hero_background_image'); ?>')"></div>
                 <div class="overlay"></div>
                 <div class="content">
                     <div class="container">
@@ -45,29 +45,10 @@
                     </div>
                 </div>
             </div>
-            <div class="section tiny light-gray">
-                <div class="large-container">
-                    <div class="full">
-                        <h2 class="text-center">Recent Activity</h2>
-                    </div>
-                </div>
-                <div class="large-container">
-                    <?php foreach ($recentActivity as $post) { ?>
-                        <div class="third activity-preview">
-                            <div class="image circle outline" style="background-image: url('<?php the_field('thumbnail_preview'); ?>');"></div>
-                            <h4><?php echo $post->post_title; ?></h4>
-                            <p><?php the_field('location', $post->ID); ?><p>
-                        </div>
-                    <?php } ?>
-                </div>
-                <div class="large-container">
-                    <div class="full">
-                        <p class="text-center">
-                            <a class="button dark-gray" href="/recent-activity">All Activity</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <?php
+                $pages = $recentActivity;
+                include(locate_template('recent-activity-section.php', false, false));
+            ?>
         </main>
 
         <?php get_footer(); ?>

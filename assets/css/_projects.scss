@@ -11,3 +11,74 @@
         }
     }
 }
+
+#project {
+    .hero {
+        height: 450px;
+    }
+
+    h1 {
+        margin-bottom: 0px;
+    }
+
+    p.location {
+        color: #555555;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    ul.project-bullets {
+        position: relative;
+        background-color: #eaeaea;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 40px;
+        list-style: none;
+        border: 1px solid #c2c2c2;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 1px;
+            height: 100%;
+            background-color: #c2c2c2;
+        }
+
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            width: 50%;
+            display: inline-block;
+            padding: 30px 40px 20px;
+            float: left;
+
+            li {
+                position: relative;
+                padding-left: 15px;
+
+                &:before {
+                    font-family: 'FontAwesome';
+                    content: '\f111';
+                    font-size: 8px;
+                    color: #333333;
+                    padding: 8px 0px;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    #project-map {
+        height: 400px;
+    }
+}
