@@ -57,19 +57,29 @@
                                 <div class="column">
                                     <?php $column = false; ?>
                                     <?php foreach ($project_bullets as $i => $bullet) { ?>
+
+                                        <?php if (sizeof($project_bullets) % 2 == 1) { ?>
+                                            <li><?php echo $bullet; ?></li>
+                                        <?php } ?>
+
                                         <?php if (!$column && $i >= floor(sizeof($project_bullets) / 2)) { ?>
                                             <?php $column = true; ?>
                                             </div>
                                             <div class="column">
                                         <?php } ?>
 
-                                        <li><?php echo $bullet; ?></li>
+                                        <?php if (sizeof($project_bullets) % 2 == 0) { ?>
+                                            <li><?php echo $bullet; ?></li>
+                                        <?php } ?>
                                     <?php } ?>
                                 </div>
                             </ul>
 
-                            <div id="project-map">
-                            </div>
+
+                            <?php if(get_field('google_maps_lat') && get_field('google_maps_lng')) { ?>,
+                                <div id="project-map">
+                                </div>
+                            <?php } ?>
 
                             <script>
                                 function initMap() {

@@ -5,13 +5,14 @@
 
     $max_num_pages = 5;
     $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
-    $pages = array_slice(get_children(array(
+    $all_pages = get_children(array(
         'post_status' => 'publish',
         'post_parent' => get_the_ID(),
         'numberposts' => -1,
-    )), ($page_num - 1) * $max_num_pages);
+    ));
+    $pages = array_slice($all_pages, ($page_num - 1) * $max_num_pages, $max_num_pages);
 
-    $more_pages = $page_num * $max_num_pages < sizeof($pages);
+    $more_pages = $page_num * $max_num_pages < sizeof($all_pages);
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -26,7 +27,7 @@
                 <div class="section white no-padding no-border">
                     <div class="container">
                         <div class="full">
-                            <h1 class="text-center uppercase"><?php echo get_the_title(); ?></h2>
+                            <h1 class="text-center uppercase"><?php echo get_the_title(); ?></h1>
                         </div>
                     </div>
                 </div>

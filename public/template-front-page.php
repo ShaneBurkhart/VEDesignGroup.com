@@ -17,7 +17,7 @@
 
         <?php get_header(); ?>
 
-        <main>
+        <main class="no-padding">
             <div class="hero">
                 <div class="bg" style="background-image: url('<?php the_field('hero_background_image'); ?>')"></div>
                 <div class="overlay"></div>
