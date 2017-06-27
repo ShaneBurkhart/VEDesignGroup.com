@@ -3,17 +3,6 @@
     * Template Name: Project Page
     */
 
-    $project_tag_id = get_field('project_tag');
-    $recentActivity = array();
-    if ($project_tag_id) {
-        $recentActivityQuery = new WP_Query(array(
-            'category_name' => 'recent-activity',
-            'posts_per_page' => 3,
-            'tag_id' => get_field('project_tag'),
-        ));
-        $recentActivity = $recentActivityQuery->posts;
-    }
-
     $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
     global $wp_query;
     $wp_query = NULL;
@@ -46,7 +35,9 @@
                         <div class="full">
                             <h1 class="text-center uppercase"><?php echo get_the_title(); ?></h1>
                             <p class="text-center location"><?php the_field('location'); ?></p>
-                            <p class="text-center"><?php the_field('project_snippet'); ?></p>
+                            <?php if (get_field('project_snippet', $project->ID)) { ?>
+                                <p class="text-center"><?php the_field('project_snippet'); ?></p>
+                            <?php } ?>
 
 
                         </div>
@@ -79,38 +70,30 @@
                             <?php if(get_field('google_maps_lat') && get_field('google_maps_lng')) { ?>,
                                 <div id="project-map">
                                 </div>
+
+                                <script>
+                                    function initMap() {
+                                        var uluru = {
+                                            lat: <?php echo get_field('google_maps_lat'); ?>,
+                                            lng: <?php echo get_field('google_maps_lng'); ?>,
+                                        };
+                                        var map = new google.maps.Map(document.getElementById('project-map'), {
+                                            zoom: 12,
+                                            center: uluru,
+                                            scrollwheel: false,
+                                        });
+                                        var marker = new google.maps.Marker({
+                                            position: uluru,
+                                            map: map
+                                        });
+                                    }
+                                </script>
+
+                                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzto5QywRpPqZ3Lu8X6xq4lz8lqT3VJNs&callback=initMap"></script>
                             <?php } ?>
-
-                            <script>
-                                function initMap() {
-                                    var uluru = {
-                                        lat: <?php echo get_field('google_maps_lat'); ?>,
-                                        lng: <?php echo get_field('google_maps_lng'); ?>,
-                                    };
-                                    var map = new google.maps.Map(document.getElementById('project-map'), {
-                                        zoom: 12,
-                                        center: uluru,
-                                        scrollwheel: false,
-                                    });
-                                    var marker = new google.maps.Marker({
-                                        position: uluru,
-                                        map: map
-                                    });
-                                }
-                            </script>
-
-                            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzto5QywRpPqZ3Lu8X6xq4lz8lqT3VJNs&callback=initMap"></script>
                         </div>
                     </div>
                 </div>
-
-                <?php
-                    if (sizeof($recentActivity)) {
-                        $pages = $recentActivity;
-                        include(locate_template('recent-activity-section.php', false, false));
-                    }
-                ?>
-
             </div>
         </main>
 

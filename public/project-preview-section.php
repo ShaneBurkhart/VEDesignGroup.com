@@ -12,7 +12,9 @@
         <div class="description">
             <h2><?php echo $project->post_title; ?></h4>
             <p class="location"><?php the_field('location', $project->ID); ?><p>
-            <p><?php the_field('project_snippet', $project->ID); ?><p>
+            <?php if (get_field('project_snippet', $project->ID)) { ?>
+                <p><?php the_field('project_snippet', $project->ID); ?><p>
+            <?php } ?>
             <a class="button dark-gray" href="<?php echo get_permalink($project->ID); ?>">View Project</a>
         </div>
         <?php if (!$alt) { ?>
