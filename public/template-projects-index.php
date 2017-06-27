@@ -3,12 +3,16 @@
     * Template Name: Projects List Page
     */
 
-    $max_num_pages = 5;
+    $max_num_pages = 4;
     $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
-    $all_pages = get_children(array(
+    $all_pages = get_posts(array(
+        'post_type' => 'page',
         'post_status' => 'publish',
         'post_parent' => get_the_ID(),
         'numberposts' => -1,
+        'meta_key' => 'project_position',
+        'orderby' => 'meta_value',
+        'order' => 'ASC'
     ));
     $pages = array_slice($all_pages, ($page_num - 1) * $max_num_pages, $max_num_pages);
 
