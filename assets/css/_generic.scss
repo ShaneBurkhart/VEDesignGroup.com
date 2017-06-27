@@ -2,16 +2,20 @@ body, html{
     margin: 0;
     padding: 0;
     font-family: 'Cantarell', sans-serif;
+    height: 100%;
 }
 
 body {
     color: #292929;
     min-height: 100%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
     padding-top: 110px;
+    flex: 1 0 auto;
 
     &.no-padding {
         padding-top: 70px;

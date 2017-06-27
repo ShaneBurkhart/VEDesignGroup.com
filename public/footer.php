@@ -1,4 +1,4 @@
-<footer class="section small dark-gray">
+<footer class="section small no-border dark-gray">
     <div class="large-container">
         <div class="full">
             <address>
