@@ -2438,6 +2438,11 @@ input[type=text], input[type=email], select, textarea {
           content: none;
           display: none; }
 
+@media only screen and (max-width: 800px) {
+  .section .container {
+    width: 100%;
+    padding: 0px 3%; } }
+
 @media only screen and (max-width: 1000px) {
   .section .large-container {
     width: 100%;
@@ -2557,25 +2562,6 @@ footer address {
     width: 100%;
     padding: 0px 3%; } }
 
-.team-member, .activity-preview {
-  text-align: center; }
-  .team-member .image, .activity-preview .image {
-    width: 200px;
-    height: 200px;
-    background-color: #eaeaea;
-    margin: 0 auto 20px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-  .team-member h4, .activity-preview h4 {
-    margin-bottom: 0px; }
-  .team-member p, .activity-preview p {
-    color: #888888;
-    font-size: 14px; }
-
 #contact-page #map-section h2 {
   margin: 0; }
 
@@ -2643,3 +2629,25 @@ footer address {
 
 #project #project-map {
   height: 400px; }
+
+.thumbnail-preview {
+  display: inline-block;
+  text-align: center;
+  width: 180px;
+  padding: 0 20px; }
+  .thumbnail-preview .image {
+    width: 200px;
+    height: 200px;
+    background-color: #eaeaea;
+    margin: 0 auto 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+  .thumbnail-preview h4 {
+    margin-bottom: 0px; }
+  .thumbnail-preview p {
+    color: #888888;
+    font-size: 14px; }

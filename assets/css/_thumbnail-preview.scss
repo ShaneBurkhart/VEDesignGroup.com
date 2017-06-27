@@ -1,0 +1,28 @@
+.thumbnail-preview {
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    padding: 0 20px;
+
+    .image {
+        width: 200px;
+        height: 200px;
+        background-color: #eaeaea;
+        margin: 0 auto 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    h4 {
+        margin-bottom: 0px;
+    }
+
+    p {
+        color: #888888;
+        font-size: 14px;
+    }
+}
