@@ -2507,10 +2507,27 @@ footer address {
     transform: translate(-50%, -50%);
     width: 900px; }
   .hero h1 {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    max-width: 625px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+    font-size: 48px; }
+    .hero h1 .main {
+      float: left; }
+    .hero h1 .sub {
+      font-size: 22px;
+      position: absolute;
+      bottom: 7px;
+      right: 0; }
+    .hero h1:after {
+      content: '';
+      display: table;
+      clear: both; }
   .hero p {
-    color: #cccccc;
-    font-weight: 300; }
+    color: #dddddd;
+    font-weight: 300;
+    font-size: 16px; }
     .hero p.shout {
       margin-bottom: 5px;
       font-family: "Handlee";
@@ -2519,6 +2536,21 @@ footer address {
       width: 75%;
       margin-left: auto;
       margin-right: auto; }
+
+@media only screen and (max-width: 635px) {
+  .hero h1 {
+    text-align: center; }
+    .hero h1 .main {
+      float: none;
+      display: block; }
+    .hero h1 .sub {
+      float: none;
+      display: block;
+      position: relative; }
+    .hero h1:after {
+      content: none;
+      display: table;
+      clear: both; } }
 
 @media only screen and (max-width: 1000px) {
   .hero .content {

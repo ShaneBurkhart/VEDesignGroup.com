@@ -39,11 +39,35 @@
 
     h1 {
         margin-bottom: 10px;
+        max-width: 625px;
+        margin: 0 auto;
+        text-align: left;
+        position: relative;
+        font-size: 48px;
+
+
+        & .main {
+            float: left;
+        }
+
+        & .sub {
+            font-size: 22px;
+            position: absolute;
+            bottom: 7px;
+            right: 0;
+        }
+
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
     }
 
     p {
-        color: #cccccc;
+        color: #dddddd;
         font-weight: 300;
+        font-size: 16px;
 
         &.shout {
             margin-bottom: 5px;
@@ -55,6 +79,31 @@
             width: 75%;
             margin-left: auto;
             margin-right: auto;
+        }
+    }
+}
+
+@media only screen and (max-width : 635px) {
+    .hero {
+        h1 {
+            text-align: center;
+
+            & .main {
+                float: none;
+                display: block;
+            }
+
+            & .sub {
+                float: none;
+                display: block;
+                position: relative;
+            }
+
+            &:after {
+                content: none;
+                display: table;
+                clear: both;
+            }
         }
     }
 }

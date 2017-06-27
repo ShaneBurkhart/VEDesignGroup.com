@@ -34,14 +34,20 @@
             <div class="section">
                 <div class="large-container">
                     <div class="half divider">
-                        <h3>What we do differently.</h3>
-                        <p>Sed dignissim urna feugiat dolor consectetur porta. Morbi eget tincidunt augue. Suspendisse aliquet tellus a arcu ornare condimentum.</p>
-                        <p>Maecenas ut eros massa. Cras fringilla porta turpis eget sagittis. Etiam a convallis risus. Etiam ac urna non augue sagittis tristique vel at augue.</p>
+                        <h3><?php the_field('left_header'); ?></h3>
+                        <div><?php the_field('left_body'); ?></div>
+
+                        <?php if (get_field('left_button_destination') && get_field('left_button_text')) { ?>
+                            <a class="button dark-gray" href="<?php the_field('left_button_destination'); ?>"><?php the_field('left_button_text'); ?></a>
+                        <?php } ?>
                     </div>
                     <div class="half divider">
-                        <h3>Interested in working with us?</h3>
-                        <p>Nam libero eros, congue eget fringilla a, luctus nec felis. Suspendisse potenti. In tempus suscipit nulla ut commodo.</p>
-                        <a class="button dark-gray">Contact Us</a>
+                        <h3><?php the_field('right_header'); ?></h3>
+                        <div><?php the_field('right_body'); ?></div>
+
+                        <?php if (get_field('right_button_destination') && get_field('right_button_text')) { ?>
+                            <a class="button dark-gray" href="<?php the_field('right_button_destination'); ?>"><?php the_field('right_button_text'); ?></a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
