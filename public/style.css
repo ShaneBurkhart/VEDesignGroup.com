@@ -2263,6 +2263,8 @@ p {
   margin-bottom: 25px;
   font-size: 18px;
   line-height: 1.5; }
+  p.small {
+    font-size: 14px; }
 
 a, a:hover {
   text-decoration: none; }
@@ -2281,6 +2283,9 @@ h1.normal, h1 .normal, h2.normal, h2 .normal, h3.normal, h3 .normal, h4.normal, 
 
 h1.uppercase, h1 .uppercase, h2.uppercase, h2 .uppercase, h3.uppercase, h3 .uppercase, h4.uppercase, h4 .uppercase, h5.uppercase, h5 .uppercase, h6.uppercase, h6 .uppercase, p.uppercase, p .uppercase, span.uppercase, span .uppercase, a.uppercase, a .uppercase {
   text-transform: uppercase !important; }
+
+h1.discrete, h1 .discrete, h2.discrete, h2 .discrete, h3.discrete, h3 .discrete, h4.discrete, h4 .discrete, h5.discrete, h5 .discrete, h6.discrete, h6 .discrete, p.discrete, p .discrete, span.discrete, span .discrete, a.discrete, a .discrete {
+  color: inherit; }
 
 img, .image {
   max-width: 100%; }
