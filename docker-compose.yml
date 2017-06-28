@@ -11,7 +11,7 @@ services:
         volumes:
             - ./mysql.cnf:/etc/mysql/conf.d/mysql.cnf
             - ./data/www:/var/www/html
-            - ./public:/var/www/html/wp-content/themes/custom
+            - ./public:/var/www/html/wp-content/themes/public
 
     mysql:
         image: mysql

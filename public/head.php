@@ -4,7 +4,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
     <link href="https://fonts.googleapis.com/css?family=Cantarell:400,700|Fjalla+One" rel="stylesheet">
-    <link href="/wp-content/themes/custom/style.css" rel="stylesheet">
+    <link href="/wp-content/themes/public/style.css" rel="stylesheet">
 
     <script
       src="https://code.jquery.com/jquery-2.2.4.min.js"
