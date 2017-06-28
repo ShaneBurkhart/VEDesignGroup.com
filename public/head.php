@@ -3,6 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
+    <meta name="google-site-verification" content="4cCQlp4kMHcWW-SsImgMX4GCu276orC70GokFz-I_C4" />
+
     <link href="https://fonts.googleapis.com/css?family=Cantarell:400,700|Fjalla+One" rel="stylesheet">
     <link href="/wp-content/themes/public/style.css" rel="stylesheet">
 
