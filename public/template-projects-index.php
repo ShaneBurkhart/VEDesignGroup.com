@@ -46,12 +46,18 @@
                 ?>
 
 
-                <?php if ($more_pages) { ?>
+                <?php if ($more_pages || $page_num > 1) { ?>
                     <div class="section white tiny">
                         <div class="container">
                             <div class="full text-center">
                                 <span id="next-page-button">
+                                    <?php if ($page_num > 1) { ?>
+                                        <a class="button dark-gray" href="/projects?paged=<?php echo $page_num - 1; ?>">Previous Projects</a>
+                                    <?php } ?>
+
+                                    <?php if ($more_pages) { ?>
                                         <a class="button" href="/projects?paged=<?php echo $page_num + 1; ?>">More Projects</a>
+                                    <?php } ?>
                                 </span>
                             </div>
                         </div>
