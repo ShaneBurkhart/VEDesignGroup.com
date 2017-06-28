@@ -53,7 +53,7 @@
             </div>
             <?php
                 $pages = $recentActivity;
-                include(locate_template('recent-activity-section.php', false, false));
+                //include(locate_template('recent-activity-section.php', false, false));
             ?>
         </main>
 

@@ -86,3 +86,25 @@
         height: 400px;
     }
 }
+
+#project {
+    ul.project-bullets {
+        &:before {
+            content: none;
+            display: none;
+        }
+
+        .column {
+            width: 100%;
+            display: block;
+
+            &:first-child {
+                padding-bottom: 0;
+            }
+
+            &:last-child {
+                padding-top: 0;
+            }
+        }
+    }
+}

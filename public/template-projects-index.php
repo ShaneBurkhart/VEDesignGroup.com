@@ -37,11 +37,11 @@
                 </div>
 
                 <?php
-                    $counter = 0;
+                    $counter = 1;
                     foreach ($pages as $project) {
                         $alt = $counter % 2 == 1;
                         include(locate_template('project-preview-section.php', false, false));
-                        $counter++;
+                        //$counter++;
                     }
                 ?>
 

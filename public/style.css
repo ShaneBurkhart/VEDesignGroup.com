@@ -2451,6 +2451,23 @@ input[type=text], input[type=email], select, textarea {
           content: none;
           display: none; }
 
+@media only screen and (max-width: 650px) {
+  .section .fluid-container > .half, .section .fluid-container > .two-thirds, .section .fluid-container > .third, .section .fluid-container > .description, .section .fluid-container > .graphic, .section .full-container > .half, .section .full-container > .two-thirds, .section .full-container > .third, .section .full-container > .description, .section .full-container > .graphic, .section .large-container > .half, .section .large-container > .two-thirds, .section .large-container > .third, .section .large-container > .description, .section .large-container > .graphic, .section .container > .half, .section .container > .two-thirds, .section .container > .third, .section .container > .description, .section .container > .graphic, .section .small-container > .half, .section .small-container > .two-thirds, .section .small-container > .third, .section .small-container > .description, .section .small-container > .graphic {
+    width: 100%;
+    display: block;
+    margin-bottom: 25px; }
+    .section .fluid-container > .half.divider:after, .section .fluid-container > .two-thirds.divider:after, .section .fluid-container > .third.divider:after, .section .fluid-container > .description.divider:after, .section .fluid-container > .graphic.divider:after, .section .full-container > .half.divider:after, .section .full-container > .two-thirds.divider:after, .section .full-container > .third.divider:after, .section .full-container > .description.divider:after, .section .full-container > .graphic.divider:after, .section .large-container > .half.divider:after, .section .large-container > .two-thirds.divider:after, .section .large-container > .third.divider:after, .section .large-container > .description.divider:after, .section .large-container > .graphic.divider:after, .section .container > .half.divider:after, .section .container > .two-thirds.divider:after, .section .container > .third.divider:after, .section .container > .description.divider:after, .section .container > .graphic.divider:after, .section .small-container > .half.divider:after, .section .small-container > .two-thirds.divider:after, .section .small-container > .third.divider:after, .section .small-container > .description.divider:after, .section .small-container > .graphic.divider:after {
+      height: 1px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 100%; } }
+
+@media only screen and (max-width: 500px) {
+  .section .small-container {
+    width: 100%;
+    padding: 0px 3%; } }
+
 @media only screen and (max-width: 800px) {
   .section .container {
     width: 100%;
@@ -2645,6 +2662,18 @@ footer address {
 
 #project #project-map {
   height: 400px; }
+
+#project ul.project-bullets:before {
+  content: none;
+  display: none; }
+
+#project ul.project-bullets .column {
+  width: 100%;
+  display: block; }
+  #project ul.project-bullets .column:first-child {
+    padding-bottom: 0; }
+  #project ul.project-bullets .column:last-child {
+    padding-top: 0; }
 
 .thumbnail-preview {
   display: inline-block;
