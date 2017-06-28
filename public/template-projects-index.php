@@ -11,7 +11,7 @@
         'post_parent' => get_the_ID(),
         'numberposts' => -1,
         'meta_key' => 'project_position',
-        'orderby' => 'meta_value',
+        'orderby' => 'meta_value_num',
         'order' => 'ASC'
     ));
     $pages = array_slice($all_pages, ($page_num - 1) * $max_num_pages, $max_num_pages);
