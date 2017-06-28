@@ -13,7 +13,11 @@
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
       crossorigin="anonymous"></script>
 
-    <title><?php echo wp_title('', false); ?></title>
+    <?php if (get_the_ID() == get_option( 'page_on_front' )) { ?>
+        <title>VE Design Group | Design Management Firm</title>
+    <?php } else { ?>
+        <title><?php echo get_the_title() . " | VE Design Group"; ?></title>
+    <?php } ?>
 
     <?php wp_head(); ?>
 </head>
