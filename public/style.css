@@ -1,5 +1,6 @@
 /*
 Theme Name: VE Design Group
+Version: 2
 */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2592,6 +2593,9 @@ footer address {
 #project p.location {
   color: #555555;
   font-size: 16px;
+  margin-bottom: 20px; }
+
+#project img {
   margin-bottom: 20px; }
 
 #project ul.project-bullets {

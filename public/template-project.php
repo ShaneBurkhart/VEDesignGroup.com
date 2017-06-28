@@ -25,16 +25,22 @@
 
         <?php get_header(); ?>
 
-        <main class="no-padding">
+        <main>
             <div id="project">
-                <div class="hero">
-                    <div class="bg" style="background-image: url('<?php the_field('hero_image'); ?>')"></div>
-                </div>
-                <div class="section">
+                <div class="section no-padding">
                     <div class="small-container">
                         <div class="full">
                             <h1 class="text-center uppercase"><?php echo get_the_title(); ?></h1>
                             <p class="text-center location"><?php the_field('location'); ?></p>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="full">
+                            <img src="<?php the_field('hero_image'); ?>">
+                        </div>
+                    </div>
+                    <div class="small-container">
+                        <div class="full">
                             <?php if (get_field('project_snippet', $project->ID)) { ?>
                                 <p class="text-center"><?php the_field('project_snippet'); ?></p>
                             <?php } ?>
