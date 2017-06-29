@@ -2713,17 +2713,17 @@ footer address {
 #project #project-map {
   height: 400px; }
 
-#project ul.project-bullets:before {
-  content: none;
-  display: none; }
-
-#project ul.project-bullets .column {
-  width: 100%;
-  display: block; }
-  #project ul.project-bullets .column:first-child {
-    padding-bottom: 0; }
-  #project ul.project-bullets .column:last-child {
-    padding-top: 0; }
+@media only screen and (max-width: 650px) {
+  #project ul.project-bullets:before {
+    content: none;
+    display: none; }
+  #project ul.project-bullets .column {
+    width: 100%;
+    display: block; }
+    #project ul.project-bullets .column:first-child {
+      padding-bottom: 0; }
+    #project ul.project-bullets .column:last-child {
+      padding-top: 0; } }
 
 .thumbnail-preview {
   display: inline-block;
