@@ -53,7 +53,7 @@
                         </div>
                         <div class="thumbnail-preview">
                             <h4>Brandon Cotter</h4>
-                            <p>Project Manager<p>
+                            <p>Project Engineer<p>
                         </div>
                     </div>
                 </div>
