@@ -170,6 +170,10 @@
                 display: block;
                 margin-bottom: 25px;
 
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
                 &.divider:after {
                     height: 1px;
                     width: 100%;
