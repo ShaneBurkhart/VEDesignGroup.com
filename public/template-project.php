@@ -31,7 +31,8 @@
                     <div class="container">
                         <div class="full">
                             <p class="small">
-                                <a class="discrete" href="<?php echo wp_get_referer() ? wp_get_referer() : '/projects'; ?>"><i class="fa fa-arrow-left"></i> Back to projects</a>
+                                <?php $r = wp_get_referer(); ?>
+                                <a class="discrete" href="<?php echo $r && stripos($r, 'vedesigngroup') !== false ? $r : '/projects'; ?>"><i class="fa fa-arrow-left"></i> Back to projects</a>
                             </p>
                         </div>
                     </div>
