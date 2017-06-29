@@ -6,6 +6,16 @@ header#main-nav {
     z-index: 100001;
     height: 70px;
 
+    #site-logo {
+        display: inline-block;
+        height: 50px;
+        width: 116px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 10px;
+    }
+
     #mobile-links {
         display: none;
 
@@ -89,7 +99,7 @@ header#main-nav {
     }
 }
 
-@media only screen and (max-width : 700px) {
+@media only screen and (max-width : 800px) {
     header#main-nav {
         #desktop-links {
             display: none;

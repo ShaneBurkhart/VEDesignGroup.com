@@ -6,7 +6,7 @@
 <header id="main-nav" class="section no-padding white">
     <div class="large-container">
         <div class="full">
-            <a id="site-logo" href="/"></a>
+            <a id="site-logo" href="/" style="background-image: url('<?php the_field('site_header_logo', get_option( 'page_on_front' )); ?>')"></a>
             <ul id="desktop-links">
                 <?php
                     foreach ($site_header_menu as $item) {
